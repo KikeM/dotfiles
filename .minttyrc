@@ -1,0 +1,9 @@
+CursorType=block
+Term=xterm-256color
+ThemeFile=flat-ui
+FontHeight=14
+ClipShortcuts=yes
+CtrlExchangeShift=yes
+OpaqueWhenFocused=no
+Transparency=off
+Font=Consolas

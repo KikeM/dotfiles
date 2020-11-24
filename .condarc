@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+  - defaults
+
+create_default_packages:
+  - rope
+  - python==3.8
+  - pylint
+
+envs_dirs:
+  - D:\envs
