@@ -1,0 +1,18 @@
+[alias]
+        versions = tag --sort=v:refname
+        co = checkout
+        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+        br = branch
+        ci = commit
+        st = status
+        rb = rebase -i
+        ps = push
+        pf = push --force-with-lease
+[user]
+        email = emillan@etsfactory.com
+        name = emillan
+[fetch]
+        prune = true
+        all = true
+[rebase]
+        autosquash = true
