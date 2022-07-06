@@ -5,12 +5,11 @@
         br = branch
         ci = commit
         st = status
-        rb = rebase -i
+        rb = rebase
+        rbi = rebase -i
         ps = push
-        pf = push --force-with-lease
-[user]
-        email = emillan@etsfactory.com
-        name = emillan
+        pst = push --tags
+        psf = push --force-with-lease
 [fetch]
         prune = true
         all = true
