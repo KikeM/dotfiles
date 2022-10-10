@@ -3,13 +3,18 @@
         co = checkout
         hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
         br = branch
-        ci = commit
+        cm = commit
+        cma = commit --amend
+        fix = commit --fixup
+        fixh = commit --fixup HEAD
         st = status
         rb = rebase
         rbi = rebase -i
         ps = push
         pst = push --tags
         psf = push --force-with-lease
+        pr = commit --allow-empty -m 'Create PR'
+        db = !"git branch --merged | grep -vE 'main|master|\\*' | xargs -n 1 git branch -D"
 [fetch]
         prune = true
         all = true
