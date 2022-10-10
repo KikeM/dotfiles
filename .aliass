@@ -21,7 +21,3 @@ alias condacreate='conda create --yes --name'
 alias envhere='conda activate $(basename $(PWD))'
 alias condaherevanilla='conda create --name $(basename $(PWD)) python=3.8 pip --yes --no-default-packages'
 alias condahere='conda create --name $(basename $(PWD)) python=3.8 pip --yes'
-
-# ETS Factory
-alias etspip='pip install --index http://etspip/ets/pypi/+simple/ --trusted-host etspip --extra-index https://pypi.org/simple' 
-alias python='winpty python'
