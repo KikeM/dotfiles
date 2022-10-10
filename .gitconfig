@@ -15,6 +15,9 @@
         psf = push --force-with-lease
         pr = commit --allow-empty -m 'Create PR'
         db = !"git branch --merged | grep -vE 'main|master|\\*' | xargs -n 1 git branch -D"
+[user]
+        name = Enrique Millan Valbuena
+        email = INSERT EMAIL HERE
 [fetch]
         prune = true
         all = true
