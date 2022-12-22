@@ -3,6 +3,7 @@
         co = checkout
         hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
         br = branch
+        brd = branch -D
         cm = commit
         cma = commit --amend
         fix = commit --fixup
