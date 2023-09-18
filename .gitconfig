@@ -6,6 +6,7 @@
         brd = branch -D
         cm = commit
         cma = commit --amend
+        cman = commit --amend --no-edit
         fix = commit --fixup
         fixh = commit --fixup HEAD
         st = status
