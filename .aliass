@@ -2,30 +2,39 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-
-alias lla='ls -la'
-alias home='cd ~'
+alias editshell='code ~/.bashrc'
+alias editalias='code ~/.bash_aliases'
 alias grep='grep --color=auto'
-
-# Jupyter Notebook
-alias jnb='jupyter-notebook'
-
-# Python
+alias home='cd ~'
+alias ll='ls -la'
 alias pytest='pytest --color=yes'
+alias reload='source ~/.bashrc'
 
-# Conda
-alias cda='conda activate'
-alias envss='conda env list'
+export EDITOR=vim
+export PATH=/usr/bin:$PATH
 
-envhere() { 
-    local prefix="$PWD/.venv" 
-    # local selected=$(find $prefix -maxdepth 1 -mindepth 1 -type d | fzf --select-1 --ansi -q "$1" --height 10%) 
-    conda activate $prefix 
-} 
- 
-condahere () { 
-    # conda-here [prefix] [*conda-args] 
-    local prefix="${1:-$PWD/.venv/$(echo $pyver | tr -d = | tr -d .)}" 
+source ~/.seedtag
+
+function abspath() {
+    if [ -d "$1" ]; then
+        echo "$(cd $1; pwd)"
+    elif [ -f "$1" ]; then
+        if [[ $1 == */* ]]; then
+            echo "$(cd ${1%/*}; pwd)/${1##*/}"
+        else
+            echo "$(pwd)/$1"
+        fi
+    fi
+}
+
+envhere() {
+    local prefix="$PWD/.venv"
+    conda activate $prefix
+}
+
+condahere () {
+    # conda-here [prefix] [*conda-args]
+    local prefix="${1:-$PWD/.venv/$(echo $pyver | tr -d = | tr -d .)}"
     local pyver="python=3.10"
 
     if [ $# -eq 0 ]; then
