@@ -1,0 +1,41 @@
+# ==========================================================================
+# https://conventionalcomments.org/
+# ==========================================================================
+- trigger: ",pr,"
+  replace: "**praise:**"
+
+- trigger: ",nit,"
+  replace: "**nitpick:**"
+
+- trigger: ",sugg,"
+  replace: "**suggestion:**"
+
+- trigger: ",iss,"
+  replace: "**issue:**"
+
+- trigger: ",td,"
+  replace: "**todo:**"
+
+- trigger: ",ty,"
+  replace: "**typo:**"
+
+- trigger: ",q,"
+  replace: "**question:**"
+
+- trigger: ",th,"
+  replace: "**thought:**"
+
+- trigger: ",ch,"
+  replace: "**chore:**"
+
+- trigger: ",nt,"
+  replace: "**note:**"
+
+- trigger: ",ifm,"
+  replace: "(if-minor)"
+
+- trigger: ",bk,"
+  replace: "(blocking)"
+
+- trigger: ",nbk,"
+  replace: "(non-blocking)"
